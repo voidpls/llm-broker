@@ -1,0 +1,25 @@
+{
+  "name": "llm-broker",
+  "version": "1.0.0",
+  "description": "API for accessing multiple LLM APIs",
+  "homepage": "https://github.com/voidpls/llm-broker#readme",
+  "bugs": {
+    "url": "https://github.com/voidpls/llm-broker/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/voidpls/llm-broker.git"
+  },
+  "license": "MIT",
+  "author": "",
+  "type": "commonjs",
+  "main": "api.js",
+  "scripts": {
+    "fix": "node_modules/.bin/standard --fix",
+    "test": "node api.js",
+    "testGenerate": "node generateKey.js"
+  },
+  "devDependencies": {
+    "standard": "^17.1.2"
+  }
+}
