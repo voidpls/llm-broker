@@ -1,8 +1,4 @@
-const model = require('./models/deepseek-r1')
-const { performance } = require('perf_hooks')
-
-// // require('dotenv').config()
-// // const OpenAI = require('openai')
+const model = require('./models/deepseek-r1-70b.js')
 
 async function run () {
   const start = performance.now()
@@ -33,33 +29,9 @@ async function run () {
     \end{enumerate}
     }
   `)
-  const message = res.choices[0].message.content
-    .replace(/<think>.*?<\/think>/gms, '')
-    .trim()
-  const end = performance.now()
+  const message = model.cleanResponse(res)
   console.log(message)
-  console.log(`time taken: ${(~~(end - start) / 100) / 10}s`)
+  console.log(`time taken: ${((performance.now() - start) / 1000).toFixed(1)}s`)
 }
-
-// async function run() {
-//     console.log('a')
-//     const client = new OpenAI({
-//         baseURL: 'https://api.studio.nebius.ai/v1/',
-//         apiKey: process.env.NEBIUS_KEY
-//       })
-
-//     const completion = await client.chat.completions.create({
-//         temperature: 0.6,
-//         model: 'deepseek-ai/DeepSeek-R1',
-//         messages: [
-//         {
-//             role: 'user',
-//             content: 'hi'
-//         }
-//         ]
-//     })
-
-//     console.log(completion.choices[0])
-// }
 
 run()

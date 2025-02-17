@@ -2,8 +2,8 @@ require('dotenv').config()
 const Model = require('./model.js')
 const { NEBIUS_KEY } = process.env
 
-const modelName = 'Deepseek-R1'
-const modelID = 'deepseek-ai/DeepSeek-R1'
+const modelName = 'Deepseek-R1 Distill Llama 70B'
+const modelID = 'deepseek-ai/DeepSeek-R1-Distill-Llama-70B'
 const apiEndpoint = 'https://api.studio.nebius.ai/v1/'
 const apiKey = NEBIUS_KEY
 
