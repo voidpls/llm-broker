@@ -2,7 +2,7 @@ const fastify = require('fastify')
 const fs = require('fs/promises')
 const config = require('./config.json')
 
-const app = fastify({logger: true})
+const app = fastify({ logger: true })
 
 // TODO: add timeout for response generation
 // TODO: image capability
