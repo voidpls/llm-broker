@@ -16,10 +16,15 @@
   "main": "api.js",
   "scripts": {
     "fix": "node_modules/.bin/standard --fix",
-    "test": "node api.js",
-    "testGenerate": "node generateKey.js"
+    "start": "node api.js",
+    "generate": "node generateKey.js"
   },
   "devDependencies": {
     "standard": "^17.1.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "fastify": "^5.2.1",
+    "openai": "^4.84.0"
   }
 }
